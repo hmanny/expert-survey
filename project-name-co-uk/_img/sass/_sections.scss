@@ -1,0 +1,237 @@
+    header {
+        position: fixed;
+        width: 100%;
+        max-height: 80px;
+        padding: 15px 20px 10px;
+        @include breakpoint($lg) {
+            position: relative;
+            max-height: 100%;
+        }
+        @include breakpoint($lg) {
+            padding: 25px 20px 15px;
+        }
+        @include breakpoint($xxlg) {
+            padding: 25px 26px 15px;
+        }
+        display: block;
+        background: $white;
+        z-index: 100;
+ 
+        .logo {
+            display: inline-block;
+            width: 80%;
+            @include breakpoint($md) {
+                width: 55%;
+            }
+            @include breakpoint($lg) {
+                width: 27%;
+            }
+            vertical-align: middle;
+            img {
+                max-width: 300px;
+                max-width: 100%;
+            }
+        }
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    .flex-container {
+        @include breakpoint($md) {
+            display: block;
+        }
+        padding-top: 80px;
+        @include breakpoint($lg) {
+            padding-top: 0;
+        }
+        .flexslider {
+            border: none;
+            .slides img {
+                width: 100%;
+            }
+        }
+        .flex-direction-nav li a {
+            background: none;
+            height: 100px;
+            width: 100px;
+            @include breakpoint($lg) {
+                @include transform(translateY(-50%));
+            }
+        }
+        .flex-direction-nav li .prev {
+            display: none;
+            @include breakpoint($md-lg) {
+                display: block;
+            }
+            left: 10px;
+            background: url("/project-name-co-uk/_img/theme/left.png") no-repeat;
+            background-position: center center;
+            margin-left: 0;
+        }
+        .flex-direction-nav li .next {
+            display: none;
+            @include breakpoint($md-lg) {
+                display: block;
+            }
+            right: 10px;
+            background: url("/project-name-co-uk/_img/theme/right.png") no-repeat;
+            background-position: center center;
+            margin-right: 0;
+        }
+        p.flex-caption {
+            display: none;
+            @include breakpoint($md) {
+                display: block;
+            }
+            width: 66%;
+            max-width: 790px;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            @include transform(translateY(-50%) translateX(-50%));
+            background: none;
+            bottom: inherit;
+            font-size: 34px;
+            @include breakpoint($md-lg) {
+                font-size: 38px;
+            }
+            @include breakpoint($lg) {
+                font-size: 48px;
+            }
+            line-height: 1.2;
+            font-family: $condensed;
+            text-shadow: $shadow;
+            strong {
+                font-family: $condensedBold;
+            }
+            button {
+                padding: 13px 20px;
+                @include breakpoint($xlg) {
+                    padding: 28px 70px;
+                }
+                margin-top: 18px;
+                font-size: 17px;
+                @include breakpoint($lg) {
+                    margin-top: 45px;
+                    font-size: 20px;
+                }
+                background: $light-teal;
+                font-family: $medium;
+                &:hover {
+                    background: $dark-pink;
+                }
+            }
+        }
+    }
+    .text-section {
+        background: $light-grey;
+        padding: 10px 0;
+        @include breakpoint($lg) {
+            padding: 55px 0;
+        }
+        .icon-holder {
+            text-align: center;
+            padding-bottom: 26px;
+            img {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        .text {
+            font-size: 16px;
+            @include breakpoint($md) {
+                font-size: 20px;
+            }
+            color: #5f5f5f;
+            text-align: center;
+            line-height: 1.4;
+        }
+    }
+   
+
+        #twitterBox {
+                font-family: $regular;
+                font-size: 14px;
+                line-height: 1.4;
+                ul li {
+                    margin-bottom: 30px;
+                    .user {
+                        display: inline-block;
+                        a {
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                    .tweet {
+                        display: inline-block;
+                        width: 75%;
+                        padding-left: 6px;
+                        a {
+                            color: $blue;
+                            text-decoration: none;
+                        }
+                    }
+                    .timePosted {
+                        margin-left: 52px;
+                        font-size: 12px;
+                        color: #333;
+                    }
+                    .interact {
+                        display: none;
+                    }
+                }
+            }
+
+        .map {
+            position: relative;
+            padding: 33%;
+            width: 100%;
+            @include breakpoint($md) {
+                padding: 20%;
+            }
+            @include breakpoint($md-lg) {
+                width: 50%;
+            }
+            @include breakpoint($lg) {
+                padding: 8%;
+            }
+            .acf-map {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+            }
+        }
+    
+    footer {
+        .logo {
+            padding: 10px;
+            img {
+                max-width: 100%;
+            }
+            @include breakpoint($lg) {
+                display: inline-block;
+                width: 26%;
+                vertical-align: middle;
+            }
+        }
+     
+        .copyright {
+            width: 100%;
+            padding: 16px 0;
+            text-align: right;
+            color: $white;
+            padding-right: 20px;
+            font-family: $regular;
+            font-size: 14px;
+            background: #363636;
+            a {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
