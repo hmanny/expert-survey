@@ -151,23 +151,34 @@ html[xmlns] .slides {
 /* Control Nav */
 
 .flex-control-nav {
-    width: 100%;
+    width: 110px;
     position: absolute;
-    bottom: -30px;
+    bottom: 0px;
+    margin-left: auto;
     text-align: center;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    background-color: white;
+    /* height: 40px; */
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 .flex-control-nav li {
-    margin: 0 0 0 5px;
+    margin: 0 0 0 10px;
     display: inline-block;
     zoom: 1;
-    *display: inline;
+    background: #bbb;
+    border-radius: 50%;
 }
 .flex-control-nav li:first-child {
     margin: 0;
 }
 .flex-control-nav li a {
-    width: 13px;
-    height: 13px;
+    width: 18px;
+    height: 18px;
     display: block;
     background: url(theme/bg_control_nav.png) no-repeat 0 0;
     cursor: pointer;
@@ -179,4 +190,6 @@ html[xmlns] .slides {
 .flex-control-nav li a.active {
     background-position: 0 -26px;
     cursor: default;
+    background: #4f9e36;
+    border-radius: 50%;
 }

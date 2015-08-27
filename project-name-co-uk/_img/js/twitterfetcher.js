@@ -86,7 +86,7 @@ c.push(d);b++}if(null===A){a=c.length;g=0;f=document.getElementById(B);for(h="<u
 var config1 = {
   "id": '349830051820343297',
   "domId": 'twitterBox',
-  "maxTweets": 2,
+  "maxTweets": 1,
   "enableLinks": true,
   "showPermalinks": false
 };
