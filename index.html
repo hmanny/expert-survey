@@ -17,18 +17,32 @@
 
     <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
-            $('.flexslider').flexslider({
+            $('#topslider').flexslider({
                 animation: "fade",
                 controlsContainer: ".flex-container",
-                controlNav: true,
+                controlNav: true
             });
+            $('#bottomslider').flexslider({
+                animation: "fade",
+                controlsContainer: ".flex-container-two",
+                controlNav: true
+            });
+
         });
+
         $(document).ready(function() {
             $(".imgLiquidFill").imgLiquid();
-            $(".slides li").imgLiquid({
-                horizontalAlign: '15%'
-
+            $("#topslider .slides li").imgLiquid({
+                horizontalAlign: '15%',
             }).css("height", "700px");
+
+            $(".innerbox").find("button").hover(function() {
+                    $(this).parents(".innerbox").addClass("linkhvr");
+                }, function() {
+                    $(this).parents(".innerbox").removeClass("linkhvr");
+                }
+
+            );
         });
 
     </script>
@@ -87,7 +101,7 @@
 
 
     <div class="flex-container">
-        <div class="flexslider">
+        <div class="flexslider" id="topslider">
             <ul class="slides">
                 <li>
                     <p><img src="/project-name-co-uk/_img/banner-img.jpg" alt="" /></p>
@@ -131,6 +145,7 @@
             <div class="grid1"></div>
         </div>
     </div>
+
     <div class="three-boxes">
         <div class="box">
             <div class="innerbox">
@@ -160,59 +175,74 @@
 
 
 
+    <div class="twitterstrip">
+        <div class="container">
+            <div class="grid1"></div>
+            <div class="grid10">
+                <img src="/project-name-co-uk/_img/twitterlg.png">
+                <h1>Latest Tweets</h1>
+                <div id="twitterBox"></div>
+            </div>
+            <div class="grid1"></div>
+        </div>
+    </div>
 
-    <div id="twitterBox"></div>
+    <div class="testimonials">
+        <div class="container">
+            <div class="grid4">
+                <img class="testimonialImage" src="/project-name-co-uk/_img/testimonial.png">
+            </div>
+            <div class="grid8">
+                <div class="flex-container-testimonials">
+                    <div class="flexslider" id="bottomslider">
+                        <ul class="slides">
+                            <li>
+                                <p class="flex-caption">
+                                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum dolor at tortor mattis, quis dignissim nisi placerat. Proin ut commodo lorem. Nullam ut leo sed ante placerat porta ac et risus. Proin mollis nisl at enim consectetur, in tempor velit dignissim. Nam lacinia lectus ac velit mollis, et aliquam tortor vulputate. Nam sollicitudin pellentesque nulla, et vestibulum nibh rhoncus vel. Sed eget lorem non mauris tempus placerat. ”<span class="name">Customer Name - Company Name</span>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="flex-caption">
+                                    “Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. ”<span class="name">Customer Name - Company Name</span>
 
-
-    <!--   <div class="acf-map">
-                <div class="marker" data-lat="51.4559654" data-lng="-2.621529799999962"></div>
-            </div> -->
-
-
+                                </p>
+                            </li>
+                            <li>
+                                <p class="flex-caption">
+                                    “Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? ”<span class="name">Customer Name - Company Name</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
-        <div class="logo"><img src="/project-name-co-uk/_img/logo.png"></div>
+        <div class="container">
+          
+                <div class="logo"><img src="/project-name-co-uk/_img/logow.png"></div>
 
-        <nav class="footer-menu">
-
-            <ul class="menu" id="main">
-                <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
-                <li id="menu1"><a title="About us" href="#">Who We Are</a>
-
-                </li>
-                <li id="menu1"><a title="Our Service" href="#">Training</a>
-                    <ul>
-                        <li><a title="Our team" href="#">Service One</a></li>
-                        <li><a title="Our process" href="#">Service Two</a></li>
-                        <li><a title="Our location" href="#">Service Three</a></li>
-
-                    </ul>
-
-                </li>
-                <li id="menu2"><a title="Our process" href="#">FAQ</a></li>
-                <li id="menu3"><a title="Our location" href="#">Contact Us</a></li>
-
-            </ul>
-
-        </nav>
-
-        <div class="copyright">&copy; Edgecumbe Health 2015 | Website Designed by The Smarter Web Company</div>
+         
+          
+                &copy; Expert Survey Solutions | Website Designed by The Smarter Web Company
+            </div>
+ 
 
         <nav class="mobile-menu">
 
-            <div class="buttonwrap">
-                <button>Login to EHO</button>
-            </div>
+ 
             <ul class="menu" id="main">
                 <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
                 <li id="menu1"><a title="About us" href="#">Who We Are</a>
 
                 </li>
                 <li id="menu1"><a title="Our Service" href="#">Training</a>
+
                     <ul>
                         <li><a title="Our team" href="#">Service One</a></li>
                         <li><a title="Our process" href="#">Service Two</a></li>
                         <li><a title="Our location" href="#">Service Three</a></li>
-
                     </ul>
 
                 </li>
@@ -221,7 +251,10 @@
 
             </ul>
         </nav>
+    
         <button class="menu_button"></button>
+       
+            
 
     </footer>
 
