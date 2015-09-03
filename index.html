@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
-    <link href="/project-name-co-uk/_img/stylesheets/flexslider.css" rel="stylesheet" type="text/css" />
-    <link href="/project-name-co-uk/_img/stylesheets/screen.css" rel="stylesheet" type="text/css" />
-    <script src="/project-name-co-uk/_img/js/jquery-1.11.3.min.js"></script>
-    <script src="/project-name-co-uk/_img/js/jquery.flexslider-min.js"></script>
-    <script src="/project-name-co-uk/_img/js/imgLiquid.js"></script>
-    <script src="/project-name-co-uk/_img/js/matchheight.js"></script>
-    <script src="/project-name-co-uk/_img/js/twitterfetcher.js"></script>
+    <link href="/expertsurveysolutions-co-uk/_img/stylesheets/flexslider.css" rel="stylesheet" type="text/css" />
+    <link href="/expertsurveysolutions-co-uk/_img/stylesheets/screen.css" rel="stylesheet" type="text/css" />
+    <script src="/expertsurveysolutions-co-uk/_img/js/jquery-1.11.3.min.js"></script>
+    <script src="/expertsurveysolutions-co-uk/_img/js/jquery.flexslider-min.js"></script>
+    <script src="/expertsurveysolutions-co-uk/_img/js/imgLiquid.js"></script>
+    <script src="/expertsurveysolutions-co-uk/_img/js/matchheight.js"></script>
+    <script src="/expertsurveysolutions-co-uk/_img/js/twitterfetcher.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-    <script src="/project-name-co-uk/_img/js/mobile-menu.js"></script>
+    <script src="/expertsurveysolutions-co-uk/_img/js/mobile-menu.js"></script>
 
     <script type="text/javascript" charset="utf-8">
         $(window).load(function() {
@@ -31,10 +31,14 @@
         });
 
         $(document).ready(function() {
-            $(".imgLiquidFill").imgLiquid();
+            $(".imgLiquidFill").imgLiquid({
+                    horizontalAlign: '21%'
+                }
+
+            );
             $("#topslider .slides li").imgLiquid({
-                horizontalAlign: '15%',
-            }).css("height", "700px");
+                horizontalAlign: '21%',
+            });
 
             $(".innerbox").find("button").hover(function() {
                     $(this).parents(".innerbox").addClass("linkhvr");
@@ -43,6 +47,7 @@
                 }
 
             );
+            $(".mobile-menu .menu").append($('#mobileLogin'));
         });
 
     </script>
@@ -56,7 +61,7 @@
         <div class="container">
 
             <div class="grid3">
-                <div class="logo"><img src="/project-name-co-uk/_img/logo.png"></div>
+                <div class="logo"><img src="/expertsurveysolutions-co-uk/_img/logo.png"></div>
             </div>
             <div class="grid7">
 
@@ -66,7 +71,7 @@
                         <li id="menu1"><a title="About us" href="#">Who We Are</a>
 
                         </li>
-                        <li id="menu1"><a title="Our Service" href="#">Training</a>
+                        <li id="menu1"><a title="Our Service" href="#">Our Service</a>
                             <ul>
                                 <li><a title="Our team" href="#">Service One</a></li>
                                 <li><a title="Our process" href="#">Service Two</a></li>
@@ -89,11 +94,12 @@
             </div>
 
             <div class="social">
-                <a href="#"><img src="/project-name-co-uk/_img/twitter.png"></a>
-                <a href="#"><img src="/project-name-co-uk/_img/fb.png"></a>
+                <a href="#"><img src="/expertsurveysolutions-co-uk/_img/twitter.png"></a>
+                <a href="#"><img src="/expertsurveysolutions-co-uk/_img/fb.png"></a>
             </div>
 
         </div>
+        <button class="menu_button"></button>
     </header>
 
 
@@ -104,7 +110,7 @@
         <div class="flexslider" id="topslider">
             <ul class="slides">
                 <li>
-                    <p><img src="/project-name-co-uk/_img/banner-img.jpg" alt="" /></p>
+                    <p><img src="/expertsurveysolutions-co-uk/_img/banner-img.jpg" alt="" /></p>
                     <p class="flex-caption"><span class="caps">Expert Survey Solutions</span>
                         <br><span class="caption-text">Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla eros a odio vulputate finibus.</span>
 
@@ -113,7 +119,7 @@
                     </p>
                 </li>
                 <li>
-                    <p><img src="/project-name-co-uk/_img/banner-img.jpg" alt="" /></p>
+                    <p><img src="/expertsurveysolutions-co-uk/_img/banner-img.jpg" alt="" /></p>
                     <p class="flex-caption"><span class="caps">Expert Survey Solutions</span>
                         <br><span class="caption-text">Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla eros a odio vulputate finibus.</span>
 
@@ -121,7 +127,7 @@
                     </p>
                 </li>
                 <li>
-                    <p><img src="/project-name-co-uk/_img/banner-img.jpg" alt="" /></p>
+                    <p><img src="/expertsurveysolutions-co-uk/_img/banner-img.jpg" alt="" /></p>
                     <p class="flex-caption"><span class="caps">Expert Survey Solutions</span>
                         <br><span class="caption-text">Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla eros a odio vulputate finibus.</span>
 
@@ -149,7 +155,7 @@
     <div class="three-boxes">
         <div class="box">
             <div class="innerbox">
-                <img src="/project-name-co-uk/_img/man.png">
+                <img src="/expertsurveysolutions-co-uk/_img/man.png">
                 <h1>Who We Are</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum dolor at tortor mattis, quis dignissim nisi placerat.</p>
                 <button>About</button>
@@ -157,7 +163,7 @@
         </div>
         <div class="box">
             <div class="innerbox">
-                <img src="/project-name-co-uk/_img/ruler.png">
+                <img src="/expertsurveysolutions-co-uk/_img/ruler.png">
                 <h1>Our Services</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum dolor at tortor mattis, quis dignissim nisi placerat</p>
                 <button>Services</button>
@@ -165,7 +171,7 @@
         </div>
         <div class="box">
             <div class="innerbox">
-                <img src="/project-name-co-uk/_img/question.png">
+                <img src="/expertsurveysolutions-co-uk/_img/question.png">
                 <h1>FAQs</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum dolor at tortor mattis, quis dignissim nisi placerat</p>
                 <button>Questions</button>
@@ -179,7 +185,7 @@
         <div class="container">
             <div class="grid1"></div>
             <div class="grid10">
-                <img src="/project-name-co-uk/_img/twitterlg.png">
+                <img src="/expertsurveysolutions-co-uk/_img/twitterlg.png">
                 <h1>Latest Tweets</h1>
                 <div id="twitterBox"></div>
             </div>
@@ -189,8 +195,8 @@
 
     <div class="testimonials">
         <div class="container">
-            <div class="grid4">
-                <img class="testimonialImage" src="/project-name-co-uk/_img/testimonial.png">
+            <div class="grid4 testImageContainer">
+                <img class="testimonialImage" src="/expertsurveysolutions-co-uk/_img/testimonial.png">
             </div>
             <div class="grid8">
                 <div class="flex-container-testimonials">
@@ -220,24 +226,24 @@
     </div>
     <footer>
         <div class="container">
-          
-                <div class="logo"><img src="/project-name-co-uk/_img/logow.png"></div>
 
-         
-          
-                &copy; Expert Survey Solutions | Website Designed by The Smarter Web Company
-            </div>
- 
+            <div class="logo"><img src="/expertsurveysolutions-co-uk/_img/logow.png"></div>
+
+
+
+            <div class="copyright">&copy; <span>Expert Survey Solutions |</span> <span>Website Designed by The Smarter Web Company</span></div>
+        </div>
+
 
         <nav class="mobile-menu">
 
- 
+
             <ul class="menu" id="main">
                 <li id="menu0"><a class="linkActive" title="Home" href="#">Home</a></li>
                 <li id="menu1"><a title="About us" href="#">Who We Are</a>
 
                 </li>
-                <li id="menu1"><a title="Our Service" href="#">Training</a>
+                <li id="menu1"><a title="Our Service" href="#">Our Service</a>
 
                     <ul>
                         <li><a title="Our team" href="#">Service One</a></li>
@@ -249,12 +255,19 @@
                 <li id="menu2"><a title="Our process" href="#">FAQ</a></li>
                 <li id="menu3"><a title="Our location" href="#">Contact Us</a></li>
 
+
+
             </ul>
+
+            <button id="mobileLogin">
+                Login
+            </button>
+
         </nav>
-    
-        <button class="menu_button"></button>
-       
-            
+
+
+
+
 
     </footer>
 

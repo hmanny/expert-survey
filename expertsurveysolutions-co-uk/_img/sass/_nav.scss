@@ -1,0 +1,145 @@
+.grid7 {
+    text-align: right;
+    vertical-align: middle;
+    .top-menu {
+        display: none;
+        @include breakpoint($lg) {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        ul {
+            display: block;
+            width: 100%;
+            li {
+                display: inline-block;
+                position: relative;
+                padding: 0 7px;
+                a {
+                    color: #555;
+                    font-size: 15px;
+                    font-family: $bold;
+                    color: #444;
+                    @include breakpoint($xlg) {
+                        font-size: 16px;
+                    }
+                    text-decoration: none;
+                    @include transition (color 0.5s);
+                    &.linkActive {
+                     color: $green;
+                    }
+                }
+                ul {
+                    display: none;
+                }
+                &:hover ul {
+                    position: absolute;
+                    display: block;
+                    width: 300%;
+                    @include transform(translateX(-33%));
+                    li {
+                        display: block;
+                        background: transparent;
+                        &:first-child {
+                            padding-top: 5px;
+                        }
+                        &:last-child {
+                            border-bottom: none;
+                        }
+                        a {
+                            font-size: 13px;
+                            color: $white;
+                            display: block;
+                            padding: 10px 4px;
+                            &:hover {
+                                background: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.mobile-menu {
+    
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 80;
+    background: $white;
+  
+    ul {
+        position: absolute;
+        @include transform(translateY(-50%));
+        top: 55%;
+        width: 62.5%;
+        left: 0;
+        display: block;
+        text-align: left;
+        padding-left: 10%;
+        li {
+            padding: 16px 0;
+            border-bottom: 1px solid $green;
+            a {
+                text-decoration: none;
+                color: $text-grey;
+                font-size: 20px;
+                font-family: $bold;
+                
+            }
+            ul {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                @include transform(translateY(0));
+            }
+        }
+    }
+}
+.menu_button {
+    @include breakpoint($lg) {
+        display: none;
+    }
+    @include breakpoint($sm) {
+        font-size: 50px;
+    }
+    @include breakpoint($md) {
+        font-size: 60px;
+    }
+    z-index: 120;
+    position: absolute;
+    top: 20px;
+    @include breakpoint($md) {
+        top: 26px;
+    }
+    right: -5px;
+    @include breakpoint($md) {
+        right: 4px;
+    }
+    font-size: 44px;
+    color: $green;
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none!important;
+   
+    &:before {
+        font-family: 'icomoon';
+        content: "\e600";
+    }
+    &.is-open:before {
+        font-family: 'icomoon';
+        content: "\e601";
+    }
+    &.level2:before {
+        content: "\e602";
+    }
+}
